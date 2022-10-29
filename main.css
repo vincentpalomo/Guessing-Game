@@ -17,3 +17,7 @@ body {
 p {
     font-size: 50px;
 }
+
+input {
+    text-align: center;
+}

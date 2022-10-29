@@ -1,43 +1,41 @@
-/* 
-
-Write your guess-game code here! Don't forget to look at the test specs as a guide. You can run the specs
-by running "npm test".
-
-In this file, you will also include the event listeners that are needed to interact with your HTML file when
-a user clicks a button or adds a guess to the input field.
-
-*/
-
 // create a vairable to store the random number
 let winningNum = 0;
 
 // create an array to store the guesses
 
-let guesses = [];
-
-
-// make a random number generator using Math.random and use Math.floor to get rid of decimal
-
-let y = Math.floor(Math.random() * 100 + 1);
-console.log("winning number is:", y)
-
-
+let guess = [];
 
 // make a function or variable that keeps the value that is guessed and stores it in html.
 
-let guess = 1;
+function guessArray() {
+  boxvalue = document.getElementById("guessField").value;
+  guess.push(boxvalue)
+  console.log("input added to array:", guess)
+  return false;
+}
+
+// make a random number generator using Math.random and use Math.floor to get rid of decimal.
+
+let randomNum = Math.floor(Math.random() * 100 + 1);
+console.log("winning number is:", randomNum)
+winningNum = randomNum
+
+// function to check if the guess input is correct, high or low.
 
 function checkGuess() {
   let userGuess = guessField.value;
-  if (userGuess === y) {
-    previousGuess.textContent = "You got it right!"
-  }else if (userGuess > y) {
-    previousGuess.textContent = "Your guess was " + userGuess + ". That's too high. Try again!"
-  }else if (userGuess < y) {
-    previousGuess.textContent = "Your guess was " + userGuess + ". That's too low. Try again!"
+  console.log('number guessed:',userGuess)
+  // guess.push(userGuess)
+  if (userGuess == randomNum) {
+    currentGuess.textContent = "You got it right!"
+  }else if (userGuess > randomNum) {
+    currentGuess.textContent = `${userGuess} is high, try again!`
+  }else if (userGuess < randomNum) {
+    currentGuess.textContent = `${userGuess} is low, try again!`
   }
 }
 submitguess.addEventListener('click', checkGuess)
+
 
 // document.getElementById("submitguess").onclick = function () {
 //   let x = document.getElementById("guessField").value;
@@ -55,18 +53,9 @@ submitguess.addEventListener('click', checkGuess)
 //   }
 // }
 
-// let guessInput = document.querySelector('.guessInput');
-// let guessSubmit = document.querySelector('.guessSubmit');
-
-// function userGuess(event) {
-//     event.preventDefault();
-//     let data = document.getElementById("data");
-//     console.log(data.value);
-// }
-
 
 
 
 // showing value on html
-document.getElementById("winningNumber").innerHTML = y;
+document.getElementById("winningNumber").innerHTML = winningNum;
 

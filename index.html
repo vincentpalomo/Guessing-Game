@@ -23,14 +23,16 @@
       </form>
     </div> -->
     <div id="guessinput">
-      <label for="guessField">Take a guess:</label>
-      <input type="text" id="guessField" class="guessField">
-      <input type="submit" value="Submit" class="guessSubmit" id="submitguess">
+      <!-- <label for="guessField"></label> -->
+      <form onsubmit="return guessArray()">
+        <input type="text" id="guessField" class="guessField" placeholder="take a guess">
+        <input type="submit" value="Submit" class="guessSubmit" id="submitguess">
+      </form>
     </div>
 
     <section>
       your previous guesses:
-      <ul id="previousGuess"></ul>
+      <ul id="currentGuess"></ul>
     </section>
     
     
