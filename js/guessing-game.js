@@ -18,36 +18,42 @@ let guesses = [];
 
 // make a random number generator using Math.random and use Math.floor to get rid of decimal
 
-let randomNumber = function () {
-    console.log(randomNumber);
-    winningNum = Math.floor(Math.random() * 100 + 1)
-}
+let y = Math.floor(Math.random() * 100 + 1);
 
-// invoke random number generator
-randomNumber()
+
 
 // make a function or variable that keeps the value that is guessed and stores it in html.
+
+let guess = 1;
+
+document.getElementById("submitguess").onclick = function () {
+  let x = document.getElementById("guessField").value;
+
+  if(y == x) {
+    alert("you got the right guess " + guess)
+  }
+  else if(x > y) {
+    guess++;
+    alert("go smaller!")
+  }
+  else {
+    guess++;
+    alert("go higher!")
+  }
+}
 
 // let guessInput = document.querySelector('.guessInput');
 // let guessSubmit = document.querySelector('.guessSubmit');
 
-function userGuess(event) {
-    event.preventDefault();
-    let data = document.getElementById("data");
-    console.log(data.value);
-}
+// function userGuess(event) {
+//     event.preventDefault();
+//     let data = document.getElementById("data");
+//     console.log(data.value);
+// }
 
-let list = document.getElementById("previousGuess")
 
-let array = guesses.length;
 
-let text ="";
-for (let i = 0; i < array; i++) {
-  text += "" + guesses[i] + "";
-}
-text += "";
 
 // showing value on html
-document.getElementById("winningNumber").innerHTML = winningNum;
+document.getElementById("winningNumber").innerHTML = y;
 
-document.getElementById('previousGuess').innerHTML = text;

@@ -16,16 +16,21 @@
     <input type="text" placeholder="guess" onsubmit="userGuess(event)" maxlength="3" id="guessInput" class="guessSubmit">
     <input type="submit" value="submit" class="guessSubmit"> -->
     
-    <div id="container">
+    <!-- <div id="container">
       <form action="" id="form" onsubmit="userGuess(event)">
         <input type="text" name="data" id="data" placeholder="take a guess">
         <button type="submit">Submit</button>
       </form>
+    </div> -->
+    <div id="guessinput">
+      <label for="guessField">Take a guess:</label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit" class="guessSubmit" id="submitguess">
     </div>
 
     <section>
       your previous guesses:
-      <p id="previousGuess"></p>
+      <ul id="previousGuess"></ul>
     </section>
     
     
