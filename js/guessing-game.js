@@ -19,6 +19,7 @@ let guesses = [];
 // make a random number generator using Math.random and use Math.floor to get rid of decimal
 
 let y = Math.floor(Math.random() * 100 + 1);
+console.log("winning number is:", y)
 
 
 
@@ -26,21 +27,33 @@ let y = Math.floor(Math.random() * 100 + 1);
 
 let guess = 1;
 
-document.getElementById("submitguess").onclick = function () {
-  let x = document.getElementById("guessField").value;
-
-  if(y == x) {
-    alert("you got the right guess " + guess)
-  }
-  else if(x > y) {
-    guess++;
-    alert("go smaller!")
-  }
-  else {
-    guess++;
-    alert("go higher!")
+function checkGuess() {
+  let userGuess = guessField.value;
+  if (userGuess === y) {
+    previousGuess.textContent = "You got it right!"
+  }else if (userGuess > y) {
+    previousGuess.textContent = "Your guess was " + userGuess + ". That's too high. Try again!"
+  }else if (userGuess < y) {
+    previousGuess.textContent = "Your guess was " + userGuess + ". That's too low. Try again!"
   }
 }
+submitguess.addEventListener('click', checkGuess)
+
+// document.getElementById("submitguess").onclick = function () {
+//   let x = document.getElementById("guessField").value;
+
+//   if(y == x) {
+//     alert("you got the right guess " + guess)
+//   }
+//   else if(x > y) {
+//     guess++;
+//     alert("go smaller!")
+//   }
+//   else {
+//     guess++;
+//     alert("go higher!")
+//   }
+// }
 
 // let guessInput = document.querySelector('.guessInput');
 // let guessSubmit = document.querySelector('.guessSubmit');
