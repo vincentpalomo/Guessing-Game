@@ -22,7 +22,7 @@ function guessArray() {
   let i = 0;
   while (i < guess.length) {
   console.log("array2string:", guess[i]) 
-  pastGuess += [guess[i]] + ' ';
+  pastGuess += [guess[i]] + ', ';
   document.getElementById("previousGuess").innerHTML = pastGuess;
   i++;  
   }
