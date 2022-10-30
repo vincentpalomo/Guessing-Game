@@ -12,16 +12,6 @@
     <h4>Guess a number between 1 - 100!</h4>
 <!-- make a guessing text field -->
 <!-- have buttons for submit, hint, and play again -->
-    <!-- <label for="guessInput">Try it:</label>
-    <input type="text" placeholder="guess" onsubmit="userGuess(event)" maxlength="3" id="guessInput" class="guessSubmit">
-    <input type="submit" value="submit" class="guessSubmit"> -->
-    
-    <!-- <div id="container">
-      <form action="" id="form" onsubmit="userGuess(event)">
-        <input type="text" name="data" id="data" placeholder="take a guess">
-        <button type="submit">Submit</button>
-      </form>
-    </div> -->
     <div id="guessinput">
       <!-- <label for="guessField"></label> -->
       <form onsubmit="return guessArray()">
@@ -31,8 +21,10 @@
     </div>
 
     <section>
-      your previous guesses:
-      <ul id="currentGuess"></ul>
+      <h1>your previous guess:</h1>
+      <p id="previousGuess"></p>
+      <p id="currentGuess"></p>
+      <p id="temp"></p>
     </section>
     
     
@@ -40,8 +32,8 @@
     <!-- <input type="button" value="hint">
     <input type="button" value="play again"> -->
 
-    <h1>Winning Number is</h1>
-    <p id="winningNumber"></p>
+    <!-- <h1>Winning Number is</h1>
+    <p id="winningNumber"></p> -->
 
 
 

@@ -7,7 +7,7 @@ let winningNum = 0;
 // create an array to store the guesses
 
 let guess = document.getElementById("userguess");
-console.log(guess)
+console.log('guess:', guess)
 
 
 // make a random number generator using Math.random and use Math.floor to get rid of decimal
@@ -38,5 +38,5 @@ button.addEventListener('click', function() {
 
 // showing value on html
 document.getElementById("winningNumber").innerHTML = winningNum;
-// document.getElementById("currentGuess").innerHTML = guess;
+document.getElementById("currentGuess").innerHTML = guess;
 
