@@ -8,7 +8,7 @@ let guess = [];
 
 // create variable that counts the number of guesses
 
-let guessAttemped = 0;
+let guessAttemped = 1;
 
 // make a function or variable that keeps the value that is guessed and stores it in html.
 
@@ -80,7 +80,7 @@ submitguess.addEventListener('click', difference)
 // create a function that ends the game at x number of guesses
 
 function gameOver() {
-  if (guessAttemped == 5) {
+  if (guessAttemped == 6) {
     confirm(`Gameover! Winning number was ${winningNum}`);
     window.location.reload()
     // currentGuess.textContent = `Gameover! Winning number was ${winningNum}`
