@@ -62,12 +62,16 @@ function difference() {
   console.log('diff is:', diff)
   if (diff < 10){
     temp.textContent = `You're burning up!`;
+    document.body.style.backgroundColor = "#D95050";
   }else if(diff < 25){
     temp.textContent = `You're getting warmer.`;
+    document.body.style.backgroundColor = "#EC8844";
   }else if(diff < 50){
     temp.textContent = `You're a bit chilly.`;
+    document.body.style.backgroundColor = "#7ECBE6";
   }else{
     temp.textContent = `You're ice cold!`
+    document.body.style.backgroundColor = "#5B8DF0";
   }
 }
 
@@ -84,6 +88,13 @@ function gameOver() {
 }
 
 submitguess.addEventListener('click', gameOver)
+
+// make a function or DOM to get the play again button to work
+
+document.getElementById("reset").addEventListener('click', function(){
+  location.reload();
+  return false;
+});
 
 // showing value on html
 // document.getElementById("winningNumber").innerHTML = winningNum;

@@ -8,29 +8,31 @@
     <!-- the MAIN.CSS file is linked here -->
   </head>
   <body>
-    <h1>Guessing Game</h1>
-    <h4>Guess a number between 1 - 100!</h4>
+
 <!-- make a guessing text field -->
 <!-- have buttons for submit, hint, and play again -->
     <div id="guessinput">
+      <h1>Guessing Game</h1>
+      <h4>Guess a number between 1 - 100!</h4>
       <!-- <label for="guessField"></label> -->
       <form onsubmit="return guessArray()">
         <input type="text" id="guessField" class="guessField" placeholder="take a guess">
         <input type="submit" value="Submit" class="guessSubmit" id="submitguess">
+        <input type="button" value="play again" id="reset">
       </form>
-    </div>
 
-    <section>
-      <h1>your previous guess:</h1>
+      <h3>your previous guess:</h3>
       <p id="previousGuess"></p>
       <p id="currentGuess"></p>
       <p id="temp"></p>
-    </section>
+
+    </div>
+
+
     
     
     
-    <!-- <input type="button" value="hint">
-    <input type="button" value="play again"> -->
+    <!-- <input type="button" value="hint"> -->
 
     <!-- <h1>Winning Number is</h1>
     <p id="winningNumber"></p> -->
